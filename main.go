@@ -1,11 +1,12 @@
 package main
 
 import (
-	"github.com/gorilla/mux"
+	"github.com/jananfarhadi/http-test/router"
 	"log"
 )
 
 func main() {
-	r := mux.NewRouter()
+	r := router.NewRoute()
+
 	log.Fatal(NewHttpService(r).ListenAndServe())
 }
