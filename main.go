@@ -8,5 +8,6 @@ import (
 func main() {
 	r := router.NewRoute()
 
+	log.Println("Starting server on", HostAddr)
 	log.Fatal(NewHttpService(r).ListenAndServe())
 }
